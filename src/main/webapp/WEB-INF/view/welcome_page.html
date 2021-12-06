@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<!--<div sec:authorize="isAuthenticated()">-->
+<!--    Hello  <span sec:authentication="name"></span></div>-->
+<a> Welcome to our Bank!</a>
+
+<br>
+
+<div sec:authorize="hasRole('MANAGER')">
+    <input type="button" value="Create new Customer "
+           onclick="window.location.href = 'new-user'"/>
+
+    <input type="button" value="Update customer info"
+           onclick="window.location.href = 'update-user'"/>
+</div>
+
+<div sec:authorize="hasRole('CUSTOMER')">
+    <input type="button" value="Check the balance"
+           onclick="window.location.href = 'show_info'" />
+</div>
+
+</body>
+</html>

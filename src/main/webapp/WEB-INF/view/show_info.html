@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer info</title>
+</head>
+
+<body>
+
+
+<div>
+  <p th:text="${ 'Hello ' + info.getName + ' ' + info.getSurname + '! your balance is' +
+
+  info.getBalance + '  Your current email is: ' + info.getEmail +
+  ' your age is ' + info.getAge}"> Vad</p>
+<a href="welcome_page"> Back to main page</a>
+</div>
+</body>
+</html>
